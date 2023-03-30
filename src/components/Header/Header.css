@@ -1,0 +1,25 @@
+
+.main{
+    margin: 20px 320px;
+}
+.main hr{
+    border: 1px solid rgba(17, 17, 17, 0.15);
+}
+.header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.header img {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+}
+
+.header h2 {
+    font-weight: 700;
+    font-size: 40px;
+}
