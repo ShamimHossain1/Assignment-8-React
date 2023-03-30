@@ -1,9 +1,8 @@
 
-.main{
-    margin: 20px 320px;
-}
+
 .main hr{
     border: 1px solid rgba(17, 17, 17, 0.15);
+    margin-bottom: 35px;
 }
 .header {
 
@@ -22,4 +21,17 @@
 .header h2 {
     font-weight: 700;
     font-size: 40px;
+    color: rgb(72, 72, 74);
+}
+.nav-bar{
+    display: flex;
+    gap: 45px;
+    align-items: center;
+
+}
+.nav-bar a{
+    text-decoration: none;
+    color: rgba(72, 72, 74, 0.968);
+    font-weight: 700;
+    font-size: 21px;
 }
