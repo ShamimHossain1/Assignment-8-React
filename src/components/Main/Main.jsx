@@ -39,11 +39,10 @@ const Main = () => {
 
     const bookMarked = (title)=>{
         const titleBookMark = [...bookMark, title]
-        console.log(titleBookMark.length)
         if (titleBookMark.length > 4 ){
             return
         }
-        
+
         setBookmark(titleBookMark)
         
 
