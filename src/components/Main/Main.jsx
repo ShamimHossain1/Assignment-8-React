@@ -44,7 +44,7 @@ const Main = () => {
    
     let arr = bookMark;   
     let uniqueArr = Array.from(new Set(arr));
-    console.log(uniqueArr);
+    // console.log(uniqueArr);
 
 
 
