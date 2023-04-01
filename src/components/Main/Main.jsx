@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 import Blog from '../Blogs/Blog';
 
 import './Main.css'
+import Bookmark from '../Bookmark/Bookmark';
 
 
 const Main = () => {
     
     const [blogs, setBlogs] = useState([]);
     const[times, setTime]=useState([]);
+    const[bookMark, setBookmark]=useState([]);
 
     // calling api
 
@@ -32,6 +34,26 @@ const Main = () => {
          }
          return sum;
     }
+
+    // Bookmarked function 
+
+    const bookMarked = (title)=>{
+        const titleBookMark = [...bookMark, title]
+        setBookmark(titleBookMark)
+        
+
+        
+    }
+     
+
+    // const titleBookmark = (bookMark) =>{
+    //     for(const title of bookMark){
+           
+    //     }
+    // }
+
+    
+    
    
     // main container
 
@@ -43,6 +65,7 @@ const Main = () => {
                         key={blog.id}
                         blog={blog}
                         readingTime={readingTime}
+                        bookMarked={bookMarked}
                     ></Blog>
                     )
                 }
@@ -55,8 +78,12 @@ const Main = () => {
 
                 </div>
                 <div className='bookmarked-container'>
-                    
                     <h2>Bookmarked Blogs : <span className='marked-number'>0</span> </h2>
+
+                    {
+                        bookMark.map(bookMark=> <Bookmark key={bookMark} bookMark={bookMark}></Bookmark>)
+                    }
+                    
 
                 </div>
 
