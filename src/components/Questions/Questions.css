@@ -1,6 +1,6 @@
 .question-container {
     text-align: center;
-    margin-bottom: 250px;
+    margin-bottom: 170px;
     margin-top: 30px;
 
 }
@@ -16,7 +16,6 @@
 .question p {
     font-weight: 700;
     font-size: 16px;
-    line-height: 160%;
     color: #373737dc;
 
 }
@@ -25,6 +24,33 @@
     margin: 15px;
     box-shadow: 0px 0px rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
     border-radius: 5px;
-    padding: 5px;
+    padding: 5px 100px;
 
 }
+
+@media only screen and (max-width: 600px) {
+    .question h3 {
+        font-size: 16px;
+      
+    
+    }
+    
+    .question p {
+
+        font-size: 14px;
+        font-weight: 500;
+    
+    }
+    
+    .question {
+        padding: 1px 10px;
+    
+    }
+    .question-container {
+        margin-bottom: 50px;
+    
+    }
+    
+  
+  
+  }
