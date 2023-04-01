@@ -15,10 +15,10 @@ const Blog = (props) => {
           
    }
 
-    const handleClick = () => {
-        notify();
-        bookMarked(blog_title)
-      };
+   const handleClick = () => {
+    notify();
+    bookMarked(blog_title);
+  };
    
     return (
         <div className='blog-body'>

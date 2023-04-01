@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Blog from '../Blogs/Blog';
-
 import './Main.css'
 import Bookmark from '../Bookmark/Bookmark';
 
@@ -10,6 +9,7 @@ const Main = () => {
     const [blogs, setBlogs] = useState([]);
     const[times, setTime]=useState([]);
     const[bookMark, setBookmark]=useState([]);
+
 
     // calling api
 
@@ -39,26 +39,17 @@ const Main = () => {
 
     const bookMarked = (title)=>{
         const titleBookMark = [...bookMark, title]
-        if (titleBookMark.length > 4 ){
-            return
-        }
-
-        setBookmark(titleBookMark)
-        
-
-        
+        setBookmark(titleBookMark)        
     }
    
-     
+    let arr = bookMark;   
+    let uniqueArr = Array.from(new Set(arr));
+    console.log(uniqueArr);
 
-    // const titleBookmark = (bookMark) =>{
-    //     for(const title of bookMark){
-           
-    //     }
-    // }
 
-    
-    
+
+
+
    
     // main container
 
@@ -69,7 +60,7 @@ const Main = () => {
                     blogs.map(blog => <Blog
                         key={blog.id}
                         blog={blog}
-                        readingTime={readingTime}
+                        readingTime={readingTime}                       
                         bookMarked={bookMarked}
                     ></Blog>
                     )
@@ -83,11 +74,11 @@ const Main = () => {
 
                 </div>
                 <div className='bookmarked-container'>
-                    <h2>Bookmarked Blogs : {bookMark.length} </h2>
+                    <h2>Bookmarked Blogs : {uniqueArr.length} </h2>
 
                     {
                       
-                        bookMark.map(bookMark=> <Bookmark key={bookMark} bookMark={bookMark}></Bookmark>)
+                      uniqueArr.map(bookMark=> <Bookmark key={bookMark} bookMark={bookMark}></Bookmark>)
                     }
                     
 
@@ -95,6 +86,7 @@ const Main = () => {
 
 
             </div>
+          
 
         </div>
     );
