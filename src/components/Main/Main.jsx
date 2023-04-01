@@ -39,11 +39,17 @@ const Main = () => {
 
     const bookMarked = (title)=>{
         const titleBookMark = [...bookMark, title]
+        console.log(titleBookMark.length)
+        if (titleBookMark.length > 4 ){
+            return
+        }
+        
         setBookmark(titleBookMark)
         
 
         
     }
+   
      
 
     // const titleBookmark = (bookMark) =>{
@@ -78,9 +84,10 @@ const Main = () => {
 
                 </div>
                 <div className='bookmarked-container'>
-                    <h2>Bookmarked Blogs : <span className='marked-number'>0</span> </h2>
+                    <h2>Bookmarked Blogs : {bookMark.length} </h2>
 
                     {
+                      
                         bookMark.map(bookMark=> <Bookmark key={bookMark} bookMark={bookMark}></Bookmark>)
                     }
                     
